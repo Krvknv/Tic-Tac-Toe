@@ -99,14 +99,14 @@ function showWinner(winner) {
   winnerStatus.innerHTML = `Winner: ${winner}`;
 }
 function closeModal() {
-  FIELD.style.display = "flex";
-  bg.style.width = "0";
-  bg.style.height = "0";
-  bg.style.display = "none";
-  modal.style.display = "none";
-  CELLS.forEach((cell) => (cell.style.backgroundImage = ""));
-  player = "O";
-  // location.reload()
+  // FIELD.style.display = "flex";
+  // bg.style.width = "0";
+  // bg.style.height = "0";
+  // bg.style.display = "none";
+  // modal.style.display = "none";
+  // CELLS.forEach((cell) => (cell.style.backgroundImage = ""));
+  // player = "O";
+  location.reload();
 }
 function makeSound() {
   var audio = new Audio(); // Создаём новый элемент Audio
