@@ -38,6 +38,7 @@ function makeGame(event) {
     }
     checkStatus();
     if (stepCounter === 9) {
+      steps.innerHTML = "";
       STATUS.innerHTML = "";
       winnerStatus.innerHTML = "Draw";
       stepCounter = 0;
