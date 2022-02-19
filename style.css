@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.header {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__title {
+  text-align: center;
+  width: 500px;
+  color: #333e4f;
+  font-size: 40px;
+  border-bottom: 1px solid #333e4f;
+  border-bottom-width: 3px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.field {
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.field__status {
+  margin-bottom: 40px;
+  color: #333e4f;
+  font-size: 30px;
+}
+
+.field__cell {
+  width: 150px;
+  height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.cell1,
+.cell2,
+.cell3,
+.cell4,
+.cell5,
+.cell6 {
+  border-bottom: 2px solid #333e4f;
+}
+
+.cell1,
+.cell2,
+.cell4,
+.cell5,
+.cell7,
+.cell8 {
+  border-right: 2px solid #333e4f;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal__bg {
+  display: none;
+  border-radius: 4px;
+  width: 800px;
+  height: 500px;
+  background-image: url("./assets/img/bgNaruto.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.modal__form {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #333e4f;
+  width: 300px;
+  height: 400px;
+  border-radius: 4px;
+  opacity: 0.97;
+}
+
+.modal__form button {
+  border: 2px solid #fff;
+  border-radius: 100px;
+  background: #333e4f;
+  color: #fff;
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+}
+
+.modal__title h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.modal__text span {
+  font-size: 20px;
+  display: block;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
