@@ -7,8 +7,6 @@ const winnerStatus = document.querySelector(".winner__status");
 const restartBtn = document.querySelector(".restart");
 const steps = document.querySelector(".steps");
 
-// const winningMessage = () => `Player ${player} has won!`;
-// const drawMessage = () => `Game ended in a draw!`;
 let stepCounter = 0;
 let player = "O";
 let stepX = 0;
@@ -16,12 +14,12 @@ let stepO = 0;
 
 function makeGame(event) {
   if (
-    event.target.style.backgroundImage !== 'url("./assets/svg/cross.svg")' &&
-    event.target.style.backgroundImage !== 'url("./assets/svg/circle.svg")'
+    event.target.style.backgroundImage !== 'url("./assets/png/cross.png")' &&
+    event.target.style.backgroundImage !== 'url("./assets/png/circle.png")'
   ) {
     if (player === "O") {
       player = "X";
-      event.target.style.backgroundImage = 'url("./assets/svg/cross.svg")';
+      event.target.style.backgroundImage = 'url("./assets/png/cross.png")';
       stepX++;
       steps.innerHTML = `Steps: ${stepX}`;
       stepCounter++;
@@ -29,7 +27,7 @@ function makeGame(event) {
       showWinner(player);
     } else if (player === "X") {
       player = "O";
-      event.target.style.backgroundImage = 'url("./assets/svg/circle.svg")';
+      event.target.style.backgroundImage = 'url("./assets/png/circle.png")';
       stepO++;
       steps.innerHTML = `Steps: ${stepO}`;
       stepCounter++;
@@ -43,7 +41,7 @@ function makeGame(event) {
       winnerStatus.innerHTML = "Draw";
       stepCounter = 0;
       setTimeout(showbg, 500);
-      setTimeout(showModal, 1000);
+      setTimeout(showModal, 2000);
     }
   }
 }
@@ -62,25 +60,25 @@ const checkStatus = () => {
   for (let i = 0; i < win.length; i++) {
     if (
       CELLS[win[i][0]].style.backgroundImage ===
-        'url("./assets/svg/cross.svg")' &&
+        'url("./assets/png/cross.png")' &&
       CELLS[win[i][1]].style.backgroundImage ===
-        'url("./assets/svg/cross.svg")' &&
-      CELLS[win[i][2]].style.backgroundImage === 'url("./assets/svg/cross.svg")'
+        'url("./assets/png/cross.png")' &&
+      CELLS[win[i][2]].style.backgroundImage === 'url("./assets/png/cross.png")'
     ) {
       STATUS.innerHTML = "";
       setTimeout(showbg, 500);
-      setTimeout(showModal, 4000);
+      setTimeout(showModal, 2000);
     } else if (
       CELLS[win[i][0]].style.backgroundImage ===
-        'url("./assets/svg/circle.svg")' &&
+        'url("./assets/png/circle.png")' &&
       CELLS[win[i][1]].style.backgroundImage ===
-        'url("./assets/svg/circle.svg")' &&
+        'url("./assets/png/circle.png")' &&
       CELLS[win[i][2]].style.backgroundImage ===
-        'url("./assets/svg/circle.svg")'
+        'url("./assets/png/circle.png")'
     ) {
       STATUS.innerHTML = "";
       setTimeout(showbg, 500);
-      setTimeout(showModal, 1000);
+      setTimeout(showModal, 2000);
     }
   }
 };
@@ -113,6 +111,7 @@ function makeSound() {
   var audio = new Audio(); // Создаём новый элемент Audio
   audio.src = "./assets/sound/Naruto Sasuke Scream.mp3"; // Указываем путь к звуку "клика"
   audio.autoplay = true; // Автоматически запускаем
+  audio.volume = 0.2;
 }
 
 CELLS.forEach((cell) => cell.addEventListener("click", makeGame));
